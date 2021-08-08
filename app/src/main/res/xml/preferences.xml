@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Lokalizacja">
+        <SwitchPreference
+            android:key="USE_DEVICE_LOCATION"
+            android:title="Używaj lokalizacji urządzenia"
+            android:summary="Pozwól aplikacji uzyskać Twoją lokalizację"
+            android:defaultValue="true"
+            android:disableDependentsState="true"/>
+
+        <EditTextPreference
+            android:key="CUSTOM_LOCATION"
+            android:title="Lokalizacja"
+            android:summary="Lokalizacja dla której pogoda będzie wyswietlana"
+            android:defaultValue="Warsaw"
+            android:dependency="USE_DEVICE_LOCATION"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
