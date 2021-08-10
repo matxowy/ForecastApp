@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.matxowy.forecastapp.R
+import com.matxowy.forecastapp.internal.glide.GlideApp
 import com.matxowy.forecastapp.ui.base.ScopedFragment
 import kotlinx.android.synthetic.main.current_weather_fragment.*
 import kotlinx.coroutines.launch
@@ -59,9 +60,9 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
             updateWind(it.windDirection, it.windSpeed)
             updateVisibility(it.visibilityDistance)
 
-            /*GlideApp.with(this@CurrentWeatherFragment)
-                    .load(it.weatherIcons[0])
-                    .into(imageView_condition_icon)*/
+            GlideApp.with(this@CurrentWeatherFragment)
+                    .load("http:${it.conditionIconUrl}")
+                    .into(imageView_condition_icon)
         })
     }
 
