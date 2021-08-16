@@ -1,4 +1,4 @@
-package com.matxowy.forecastapp.data.db.unitlocalized
+package com.matxowy.forecastapp.data.db.unitlocalized.current
 
 interface UnitSpecificCurrentWeatherEntry {
     val temperature: Double
